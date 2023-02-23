@@ -1,2 +1,2 @@
 # finance-project
-Finance pessoal
+Finance personal
