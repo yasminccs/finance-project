@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="apple-touch-icon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Minhas Finanças</title>
+</head>
+<body data-theme="dark">
+  <header>
+    <h1>Minhas Finanças</h1>
+    <button type="button" id="switchTheme" title="Trocar tema"><span class="material-icons">&#xe3a9;</span></button>
+  </header>
+  <main>
+    <form>
+      <h2>Nova Transação</h2>
+      <input type="hidden" id="id" name="id">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="amount">Valor:</label>
+      <input type="number" step="0.01" id="amount" name="amount" required>
+      <div id="typeTrans">
+      <div id="typeCredit">
+          <input type="radio" name="type" id="credit" checked>
+          <label for="credit">Entrada</label>
+        </div>
+        <div id="typeDebit">
+          <input type="radio" name="type" id="debit">
+          <label for="debit">Saída</label>
+        </div>
+      </div>
+      <br><br>
+      <button>Salvar</button>
+    </form>
+    <div>
+      <h2>Saldo: <span id="balance">R$ 0,00</span></h2>
+      <h2>Histórico de Transações</h2>
+      <section id="transactions"></section>
+    </div>
+  </main>
+</body>
+</html>
